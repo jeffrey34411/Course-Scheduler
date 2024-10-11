@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/beige"
+    tools:context=".ListOfToDo">
+
+    <Button
+        android:id="@+id/btnGoToAddToDo"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/turq"
+        android:fontFamily="casual"
+        android:text="Add Tasks"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnGoToHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnGoToHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/turq"
+        android:fontFamily="casual"
+        android:text="Home"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnSort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnGoToHome"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/lightred"
+        android:fontFamily="casual"
+        android:onClick="sortList"
+        android:text="ITEM ASC"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnGoToHome"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/reverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSort"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/lightred"
+        android:fontFamily="casual"
+        android:onClick="reverse"
+        android:text="ITEM DESC"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnGoToHome"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/dateASC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnGoToHome"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/lightred"
+        android:fontFamily="casual"
+        android:onClick="dateASC"
+        android:text="DATE ASC"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnSort"
+        app:layout_constraintEnd_toEndOf="@+id/btnSort"
+        app:layout_constraintStart_toStartOf="@+id/btnSort"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/dateDESC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnGoToHome"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/lightred"
+        android:fontFamily="casual"
+        android:onClick="dateDESC"
+        android:text="DATE DESC"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/reverse"
+        app:layout_constraintEnd_toEndOf="@+id/reverse"
+        app:layout_constraintStart_toStartOf="@+id/reverse"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/mToDoTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="casual"
+        android:text="To Do List"
+        android:textColor="@android:color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tasksRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mToDoTask"
+        android:layout_marginTop="30dp"
+        android:nestedScrollingEnabled="true"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/mToDoTask"
+        tools:layout_editor_absoluteX="35dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/beige"
+    tools:context=".ListOfAssignment">
+
+    <Button
+        android:id="@+id/btnGoToAddAssignment"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/turq"
+        android:fontFamily="casual"
+        android:text="Add Assignments"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnGoToHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnGoToHome"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/turq"
+        android:fontFamily="casual"
+        android:text="Home"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/sectionASC"
+        android:layout_width="145dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/btnGoToHome"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/lightred"
+        android:fontFamily="casual"
+        android:onClick="sectionASC"
+        android:text="SECTION ASC"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnGoToHome"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/sectionDESC"
+        android:layout_width="145dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/sectionASC"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/lightred"
+        android:fontFamily="casual"
+        android:onClick="sectionDESC"
+        android:text="SECTION DESC"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnGoToHome"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/dateASC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnGoToHome"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="@color/lightred"
+        android:fontFamily="casual"
+        android:onClick="dateASC"
+        android:text="DATE ASC"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/sectionASC"
+        app:layout_constraintEnd_toStartOf="@+id/btnGoToAddAssignment"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/dateDESC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnGoToHome"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="@color/lightred"
+        android:fontFamily="casual"
+        android:onClick="dateDESC"
+        android:text="DATE DESC"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/sectionDESC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnGoToAddAssignment"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/mAssignmentTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mAssignmentDueDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/mAssignmentTitle"
+        app:layout_constraintStart_toStartOf="@+id/mAssignmentTitle"
+        app:layout_constraintTop_toBottomOf="@+id/mAssignmentTitle" />
+
+    <TextView
+        android:id="@+id/mAssignmentClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/mAssignmentDueDate"
+        app:layout_constraintStart_toStartOf="@+id/mAssignmentDueDate"
+        app:layout_constraintTop_toBottomOf="@+id/mAssignmentDueDate" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/assignmentRecyclerView"
+        android:layout_width="417dp"
+        android:layout_height="450dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        tools:layout_editor_absoluteX="-3dp" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="casual"
+        android:text="Assignments"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mAssignmentTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
