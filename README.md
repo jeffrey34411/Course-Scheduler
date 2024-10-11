@@ -1,1 +1,1 @@
-# Spotify-Wrapped
+# Course-Scheduler
