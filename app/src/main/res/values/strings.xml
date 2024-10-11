@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">College Scheduler 2</string>
+    <string name="app_name">College Scheduler</string>
     <string name="save" />
     <string name="new_task" />
 </resources>

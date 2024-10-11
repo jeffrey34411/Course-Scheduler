@@ -5,5 +5,5 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.CollegeScheduler2" parent="Base.Theme.CollegeScheduler2" />
+    <style name="Theme.CollegeScheduler" parent="Base.Theme.CollegeScheduler2" />
 </resources>
